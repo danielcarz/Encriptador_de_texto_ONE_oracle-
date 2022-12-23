@@ -3,10 +3,6 @@ const encriptar_button = document.getElementById('captura_texto')
 const desencriptar_button = document.getElementById('desencriptar')
 
 
-function desencriptar_texto(){
-
-}
-
 //EVENTO
 function encriptar (){
 
@@ -37,17 +33,54 @@ function encriptar (){
         palabras__encriptadas.push(letra)
     }
 
-    
-    
     //PRUEBAS DE CONSOLA
-    console.log(list_text)
-    console.log('palabras encriptadas', palabras__encriptadas)
-    alert(lowercase)
+    //console.log(list_text)
+    console.log('el mensaje fue encriptado', palabras__encriptadas)
+    alert(' se ha encriptado el mensaje')
+
+    return palabras__encriptadas
+    
+    
+}
+
+function desencriptar_texto(){
+
+    //ARRAYS
+    const list_text = [] 
+    const palabras__desencriptadas = []
+
+    //caputra letras
+    const show = input_text.value
+
+    //LOWER CASE
+    const lowercase = show.toLowerCase()
+
+    //alamcenamieto al array
+    list_text.push(lowercase)
+
+    for(let letra of list_text){
+        
+        letra = letra.replaceAll('enter','e');
+        letra = letra.replaceAll('imes','i');
+        letra = letra.replaceAll('ai','a');
+        letra = letra.replaceAll('ober','o');
+        letra = letra.replaceAll('ufat','u');
+        letra = letra.replaceAll(' ',' ');
+
+
+        palabras__desencriptadas.push(letra)
+    }
+
+    //PRUEBAS DE CONSOLA
+    //console.log(list_text)
+    console.log('palabras desencriptadas', palabras__desencriptadas)
+    alert('el mensaje a sido desencriptado')
+
+    return palabras__desencriptadas
+
 }
 
 
-
-
 //EVENTS
-const text_encripted = encriptar_button.addEventListener('click', encriptar)
-//console.log('text encripted', text_encripted)
+encriptar_button.addEventListener('click', encriptar)
+desencriptar_button.addEventListener('click', desencriptar_texto)
