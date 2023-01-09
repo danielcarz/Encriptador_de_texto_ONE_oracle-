@@ -1,4 +1,5 @@
 const input_text = document.getElementById('input_text')
+const show_encripted = document.getElementById('show_encripted')
 const encriptar_button = document.getElementById('captura_texto')
 const desencriptar_button = document.getElementById('desencriptar')
 
@@ -33,11 +34,18 @@ function encriptar_texto (){
         palabras__encriptadas.push(letra)
     }
 
+    palabras__encriptadas.map(item => {
+        const text_encripted = document.createElement('p')
+        text_encripted.textContent = item
+        show_encripted.appendChild(text_encripted)
+
+    })
     //PRUEBAS DE CONSOLA
     
     console.log('el mensaje fue encriptado', palabras__encriptadas)
     alert(' se ha encriptado el mensaje')
 
+    
     return palabras__encriptadas
     
     
@@ -70,6 +78,11 @@ function desencriptar_texto(){
 
         palabras__desencriptadas.push(letra)
     }
+
+    palabras__desencriptadas.map(item => {
+        const desencripted = input_text.textContent = item
+        encripted.appendChild(desencripted)
+    })
 
     //PRUEBAS DE CONSOLA
     
