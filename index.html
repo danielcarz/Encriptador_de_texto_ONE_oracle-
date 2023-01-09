@@ -11,15 +11,34 @@
     <title>ENCRIPTADOR DE TEXTO</title>
 </head>
 <body>
-    <label for="">INGRESE TEXTO AQUI</label>
-    <div class="encripted">
-        <textarea name="mensaje" id="input_text" cols="30" rows="10"></textarea>
 
-    </div>
+    <section class="encriptador_container">
+
+        <figure>
+            <img src="./assets/Vector.jpg" alt="logo_alura">
+        </figure>
+
+        <section class="encriptador_wrapper">
+            <label for="">INGRESE TEXTO AQUI</label>
+            <div class="encripted">
+                <textarea name="mensaje" id="input_text" cols="74" rows="20"></textarea>
+        
+            </div>
+
+            <div class="button_wrapper">
+                <button id="captura_texto" class="button">encriptar</button>
+                <button id="desencriptar" class="button">desencriptar</button>
+                <button id="copiar" class="button">copiar</button>
+            </div>
+            
+        </section>
+        
+        
+        
     
-
-    <button id="captura_texto">encriptar</button>
-    <button id="desencriptar">desencriptar</button>
+        
+    </section>
+   
     <script src="./index.js"></script>
 </body>
 </html>

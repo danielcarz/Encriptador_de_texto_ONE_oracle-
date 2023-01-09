@@ -1,6 +1,7 @@
 const input_text = document.getElementById('input_text')
 const show_encripted = document.getElementById('show_encripted')
 const encriptar_button = document.getElementById('captura_texto')
+const copiar = document.getElementById('copiar')
 const desencriptar_button = document.getElementById('desencriptar')
 
 
@@ -38,11 +39,9 @@ function encriptar_texto (){
     
     palabras__encriptadas.map(item => {
 
- 
         const text_encripted = item
         input_text.value = text_encripted
-        
-
+               
     })
     
     //PRUEBAS DE CONSOLA
@@ -86,8 +85,11 @@ function desencriptar_texto(){
 
     palabras__desencriptadas.map(item => {
         const desencripted = input_text.value = item
-        encripted.appendChild(desencripted)
+
+        //encripted.appendChild(desencripted)
     })
+
+    
 
     //PRUEBAS DE CONSOLA
     
@@ -98,7 +100,14 @@ function desencriptar_texto(){
 
 }
 
+function copiar_texto (){
+       
+        input_text.select();
+        input_text.setSelectionRange(0, 99999)
+        document.execCommand('copy')
+}
 
 //EVENTS
 encriptar_button.addEventListener('click', encriptar_texto)
 desencriptar_button.addEventListener('click', desencriptar_texto)
+copiar.addEventListener('click', copiar_texto)
