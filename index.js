@@ -34,12 +34,17 @@ function encriptar_texto (){
         palabras__encriptadas.push(letra)
     }
 
+    input_text.value = ""
+    
     palabras__encriptadas.map(item => {
-        const text_encripted = document.createElement('p')
-        text_encripted.textContent = item
-        show_encripted.appendChild(text_encripted)
+
+ 
+        const text_encripted = item
+        input_text.value = text_encripted
+        
 
     })
+    
     //PRUEBAS DE CONSOLA
     
     console.log('el mensaje fue encriptado', palabras__encriptadas)
@@ -80,7 +85,7 @@ function desencriptar_texto(){
     }
 
     palabras__desencriptadas.map(item => {
-        const desencripted = input_text.textContent = item
+        const desencripted = input_text.value = item
         encripted.appendChild(desencripted)
     })
 
