@@ -40,6 +40,7 @@ body{
 
 #info_mensaje_no_encontrado{
     display: flex;
+    padding: 10px;
     justify-content: center;
     flex-direction: column;
 
@@ -49,7 +50,8 @@ body{
     top: 10px;
     left: 25%;
 
-    border: 1px solid rgb(255, 11, 11);
+    border: 2px solid gray;
+    border-radius: 10px;
 }
 
 #info_mensaje_no_encontrado img{
@@ -58,6 +60,22 @@ body{
     width: 350px;
 }
 
+#aceptar{
+    height: 40px;
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 6px;
+    background: #0A3871;
+}
+.info_mensaje_no_encontrado_p_h2 h2 p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    background: #0A3871;
+}
 .encripted{
     margin-top: 10px;
 }
