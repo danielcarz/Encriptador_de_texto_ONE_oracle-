@@ -12,19 +12,21 @@
 </head>
 <body>
 
-    <section class="encriptador_container">
+    <figure>
+        <img src="./assets/Vector.jpg" alt="logo_alura">
+    </figure>
 
-        <figure>
-            <img src="./assets/Vector.jpg" alt="logo_alura">
-        </figure>
+    <section id="encriptador_container" class="encriptador_container">
+
+        
 
         <section class="encriptador_wrapper">
-            <label for="">INGRESE TEXTO AQUI</label>
+            <label class="tittle" for="">INGRESE TEXTO AQUI</label>
             <div class="encripted">
-                <textarea name="mensaje" id="input_text" cols="74" rows="20"></textarea>
-        
+                <textarea name="mensaje" id="input_text" cols="74" rows="10"></textarea>
             </div>
 
+            
             <div class="button_wrapper">
                 <button id="captura_texto" class="button">encriptar</button>
                 <button id="desencriptar" class="button">desencriptar</button>
@@ -34,10 +36,18 @@
         </section>
         
         
-        
-    
-        
     </section>
+
+    <div id="mensaje_no_encriptado" style="display:none;">
+        <figure id="info_mensaje_no_encontrado">
+            <img src="./assets/Muñeco.jpg" alt="imagen_muñeco">
+            <h2>NINGUN MENSAJE FUE ENCONTRADO</h2>
+            <p>ingrese texto que deseas encriptar o desencriptar</p>
+            <button id="aceptar">ACEPTAR</button>                
+        </figure>
+       
+    </div>
+
    
     <script src="./index.js"></script>
 </body>

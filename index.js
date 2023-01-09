@@ -3,6 +3,9 @@ const show_encripted = document.getElementById('show_encripted')
 const encriptar_button = document.getElementById('captura_texto')
 const copiar = document.getElementById('copiar')
 const desencriptar_button = document.getElementById('desencriptar')
+const no_hay_mensaje = document.getElementById('mensaje_no_encriptado')
+const encriptador_container =  document.getElementById('encriptador_container')
+const aceptar =  document.getElementById('aceptar')
 
 
 //EVENTO
@@ -22,6 +25,13 @@ function encriptar_texto (){
     //almacenamieto al array
     list_text.push(lowercase)
 
+    console.log('list text es:', list_text)
+    if(list_text[0] === ''){
+        no_hay_mensaje.style.display = 'flex'
+        encriptador_container.style.opacity = '0.1'
+    }
+
+    
     for(let letra of list_text){
         
         letra = letra.replaceAll('e','enter');
@@ -35,7 +45,8 @@ function encriptar_texto (){
         palabras__encriptadas.push(letra)
     }
 
-    input_text.value = ""
+    
+    
     
     palabras__encriptadas.map(item => {
 
@@ -47,7 +58,7 @@ function encriptar_texto (){
     //PRUEBAS DE CONSOLA
     
     console.log('el mensaje fue encriptado', palabras__encriptadas)
-    alert(' se ha encriptado el mensaje')
+    
 
     
     return palabras__encriptadas
@@ -107,7 +118,18 @@ function copiar_texto (){
         document.execCommand('copy')
 }
 
+function quitar_mensaje (){
+    if(aceptar){
+        
+            no_hay_mensaje.style.display = 'none'
+            encriptador_container.style.opacity = '1.0'
+            
+        
+    }
+}
+
 //EVENTS
 encriptar_button.addEventListener('click', encriptar_texto)
 desencriptar_button.addEventListener('click', desencriptar_texto)
 copiar.addEventListener('click', copiar_texto)
+aceptar.addEventListener('click', quitar_mensaje)
