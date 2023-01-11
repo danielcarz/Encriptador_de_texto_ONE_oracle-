@@ -68,13 +68,13 @@ body{
     border-radius: 6px;
     background: #0A3871;
 }
-.info_mensaje_no_encontrado_p_h2 h2 p{
+.info_mensaje_no_encontrado_p_h2 h2, p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    background: #0A3871;
+    color: #0A3871;
 }
 .encripted{
     margin-top: 10px;

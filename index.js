@@ -28,7 +28,7 @@ function encriptar_texto (){
     console.log('list text es:', list_text)
     if(list_text[0] === ''){
         no_hay_mensaje.style.display = 'flex'
-        encriptador_container.style.opacity = '0.1'
+        encriptador_container.style.opacity = '0.0'
     }
 
     
