@@ -5,7 +5,7 @@ body{
     background-color: #F3F5FC;;
 }
 
-.encriptador_container{
+.encrypt_container{
 
     height: 100vh;
     
@@ -38,7 +38,7 @@ body{
     
 }
 
-#info_mensaje_no_encontrado{
+#text_not_found{
     display: flex;
     padding: 10px;
     justify-content: center;
@@ -54,13 +54,13 @@ body{
     border-radius: 10px;
 }
 
-#info_mensaje_no_encontrado img{
+#text_not_found img{
     margin: 0 auto;
 
     width: 350px;
 }
 
-#aceptar{
+#accept_button{
     height: 40px;
     width: 50%;
     margin: 0 auto;
@@ -68,7 +68,7 @@ body{
     border-radius: 6px;
     background: #0A3871;
 }
-.info_mensaje_no_encontrado_p_h2 h2, p{
+.text_not_found_p_h2 h2, p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -76,14 +76,14 @@ body{
     line-height: 19px;
     color: #0A3871;
 }
-.encripted{
+.encrypt_text{
     margin-top: 10px;
 }
 
 
 
 
-.button_wrapper{
+.buttons_wrapper{
     display: flex;
     justify-content: space-between;
 
@@ -96,11 +96,11 @@ body{
     
 }
 
-#captura_texto{
+#encrypt_text_button{
     background: #0A3871;
 }
 
-#desencriptar{
+#decrypt_text_button{
     background: #D8DFE8;
     color: #0A3871;
 }
