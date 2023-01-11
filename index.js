@@ -81,6 +81,11 @@ function desencriptar_texto(){
     //alamcenamieto al array
     encripted_list_text.push(lowercase)
 
+    if(encripted_list_text[0] === ''){
+        no_hay_mensaje.style.display = 'flex'
+        encriptador_container.style.opacity = '0.0'
+    }
+
     for(let letra of encripted_list_text){
         
         letra = letra.replaceAll('enter','e');
@@ -100,12 +105,7 @@ function desencriptar_texto(){
         //encripted.appendChild(desencripted)
     })
 
-    
 
-    //PRUEBAS DE CONSOLA
-    
-    console.log('palabras desencriptadas', palabras__desencriptadas)
-    alert('el mensaje a sido desencriptado')
 
     return palabras__desencriptadas
 
